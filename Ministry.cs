@@ -42,5 +42,11 @@ namespace Colloc
             }
             return result;
         }
+        public void Analize()
+        {
+            FilterHonors();
+
+            FilterLoser();
+        }
     }
 }
