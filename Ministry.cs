@@ -36,7 +36,7 @@ namespace Colloc
                 {
                     if (student != null)
                     {
-                        if (student.performance == 5) result.Add(school);
+                        if (student.performance <3 ) result.Add(school);
                     }
                 }
             }
