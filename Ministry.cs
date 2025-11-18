@@ -15,14 +15,7 @@ namespace Colloc
             List < Student > result = new List<Student>();
             foreach (var school in schools)
             {
-                List<Student> list = school.listStudents;
-                foreach (var student in list)
-                {
-                    if(student != null)
-                    {
-                        if (student.performance==5) result.Add(student);
-                    }
-                }
+                result = school.Analize();
             }
             return result;
         }
@@ -32,21 +25,17 @@ namespace Colloc
             foreach (var school in schools)
             {
                 List<Student> list = school.listStudents;
-                foreach (var student in list)
-                {
-                    if (student != null)
-                    {
-                        if (student.performance <3 ) result.Add(school);
-                    }
-                }
+                //foreach (var student in list)
+                //{
+                //    if (student != null)
+                //    {
+                //        if (student.performance <3 ) result.Add(school);
+                //    }
+                //}
+                result = school.Analize1();
             }
             return result;
         }
-        public void Analize()
-        {
-            FilterHonors();
-
-            FilterLoser();
-        }
+        
     }
 }

@@ -27,5 +27,29 @@ namespace Colloc
             }
             return null;
         }
+        public List<Student> Analize()
+        {
+            List<Student> result = new List<Student>();
+            foreach (var student in listStudents)
+            {
+                if (student != null)
+                {
+                    if (student.performance == 5) result.Add(student);
+                }
+            }
+            return result;
+        }
+        public List<School> Analize1()
+        {
+            List<School> result = new List<School>();
+            foreach (var student in listStudents)
+            {
+                if (student != null)
+                {
+                    if (student.performance <3) result.Add(this);
+                }
+            }
+            return result;
+        }
     }
 }
